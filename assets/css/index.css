@@ -1,0 +1,223 @@
+#welcome {
+    background-color: rgb(125, 30, 106);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease-in-out;
+}
+#welcome-second-bg{
+    background-color: rgb(255, 229, 157);
+    position: fixed;
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+}
+
+#welcome-container{
+    display: flex;
+    z-index: 2;
+    background-color: rgb(121, 29, 102);
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid rgb(92, 22, 78);
+    padding: 50px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 1px rgb(255, 229, 157), 8px 8px 0px rgba(0, 0, 0, 0.363);
+}
+
+#welcome-hi {
+    color: rgb(255, 229, 157);
+    font-size: 22px;
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: hianim 0.1s ease-in 1.1s forwards;
+}
+
+@keyframes hianim{
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+#welcome-hi.see {
+    filter: blur(2px);
+    transform: scale(0.9);
+}
+
+#welcome-name {
+    color: #ffe59d;
+    font-size: 60px;
+    text-shadow: 5px 5px 0px rgb(121, 29, 102), 7px 7px 0px rgb(238, 176, 176);
+    margin: 7vh 0;
+    padding: 0 0 3px 0;
+    border-bottom: none;
+    transition: all 0.7s ease-in-out;
+    animation: nameanim 0.8s ease-in-out 1.5s forwards;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 10;
+    font-variant: small-caps;
+}
+
+
+
+@keyframes nameanim {
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    33%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    66%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(1);    
+        border-bottom: 3px solid rgb(255, 229, 157);
+    }
+}
+
+#welcome-name.see {
+    padding: 10px;
+    transform: translateY(-40px);
+    border-bottom: none;
+    background-color: rgb(255, 229, 157);
+    border-radius: 20px;
+    color: rgb(92, 22, 78);
+    text-shadow: 6px 6px 0px #c4af78, 8px 8px 0px rgb(238, 176, 176);
+}
+
+#welcome #see-portofolio-btn {
+    background-color: rgb(255, 229, 157);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px 5px;
+    box-shadow: 4px 5px 2px rgb(92, 22, 78);
+    color: rgb(92, 22, 78);
+    animation: seeportofolioanim 0.2s ease-in 2.2s forwards;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes seeportofolioanim {
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+#welcome #see-portofolio-btn:hover {
+    transform: scale(1.05) rotateX(25deg);
+    box-shadow: 0px 70px 4px rgba(0, 0, 0, 0.363);
+    background-color: rgb(92, 22, 78);
+    color: rgb(255, 229, 157);
+    border: 2px dashed rgb(255, 229, 157);
+}
+
+#welcome #see-portofolio-btn:active {
+    background-color: rgb(255, 229, 157);
+    box-shadow: 0px 0px 5px rgb(255, 229, 157);
+    color: rgb(92, 22, 78);
+}
+
+#welcome-frame{
+    position:absolute;
+    height: 90%;
+    width: 90%;
+}
+
+#transition-box {
+    z-index: 50;
+    animation: trindexoout 1.5s forwards;
+    background-color: rgb(121, 29, 102);
+}
+
+@keyframes trindexoout {
+    from {
+        z-index: 50;
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        z-index: 50;
+        left: 100vw;
+    }
+}
+
+
+/* BREAKPOINTS */
+@media (max-width: 1024px) {
+    #welcome-hi{
+        font-size: 22px;
+    }
+    #welcome-name{
+        font-size: 50px;
+    }
+    #welcome #see-portofolio-btn{
+        font-size: 18px;
+    }
+    .welcome-frames{
+        width: 150px;
+    }
+}
+@media (max-width: 768px) {
+    #welcome-hi{
+        font-size: 18px;
+    }
+    #welcome-name{
+        font-size: 45px;
+        text-shadow: 3px 3px 0px rgb(121, 29, 102), 4px 4px 0px rgb(238, 176, 176);
+    }
+    #welcome #see-portofolio-btn{
+        font-size: 15px;
+    }
+    .welcome-frames{
+        width: 100px;
+    }
+}
+
+@media (max-width: 640px){
+    #welcome-hi{
+        font-size: 15px;
+    }
+    #welcome-container{
+        padding: 40px;
+    }
+    #welcome-name {
+        font-size: 30px;
+        border-bottom: 1px solid rgb(255, 229, 157);
+    }
+    
+    #welcome #see-portofolio-btn {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px){
+    #welcome-hi{
+        font-size: 12px;
+    }
+    #welcome-name{
+        font-size: 22px;
+    }
+}

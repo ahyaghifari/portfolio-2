@@ -1,0 +1,427 @@
+/* -------------------------------------------------------- PROFILE & EXPERIENCES -------------------------------------------------------- */
+#profile-experiences {
+    display: flex;
+    height: 100vh;
+}
+
+#profile-details {
+    height: 100vh;
+    width: 40%;
+    background-color: #91217a;
+    padding: 20vh 15px;
+    overflow-y: scroll;
+}
+
+#profile-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+#profile-details::-webkit-scrollbar-track {
+    background-color: rgb(125, 30, 106);
+}
+
+#profile-details::-webkit-scrollbar-thumb {
+    background-color: rgb(238, 176, 176);
+}
+
+
+#profile-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#profile-name h1 {
+    color: #91217a;
+    font-size: 42px;
+    font-variant: small-caps;
+    cursor: pointer;
+    z-index: 2;
+    text-align: center;
+}
+
+#profile-name img{
+    position: absolute;
+    transform: scaleY(105%);
+}
+
+#profile h1:active{
+    color: rgb(238, 176, 176);
+}
+
+#profile-table {
+    margin-top: 8vh;
+    padding: 15px 0;
+    border-top: 2px dashed rgb(238, 176, 176);
+    border-bottom: 2px dashed rgb(238, 176, 176);
+}
+
+#profile-table td {
+    padding: 10px 10px;
+    font-size: 20px;
+    color: rgb(238, 176, 176);
+}
+
+#profile-table .profile-value {
+    color: rgb(255, 229, 157);
+}
+
+#profil-pribadi{
+    overflow: hidden;
+    display: flex;
+}
+
+.foto{
+    object-fit: contain;
+    align-self: flex-end;
+    width: 55%;
+}
+
+.foto-hover{
+    filter: hue-rotate(110deg);
+
+}
+
+#skills-table{
+    margin-top: 2vh;
+}
+
+#skills-table td{
+    padding: 0 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.skills{
+    background-color: rgb(121, 29, 102);
+    height: fit-content;
+    padding: 10px;
+    border: 2px solid rgb(255, 229, 157);
+    box-shadow: 6px 6px 1px rgb(121, 29, 102);
+}
+
+.skills h3{
+    color: rgb(255, 229, 157);
+    font-size: 25px;
+}
+
+#experiences {
+    margin-top: 15vh;
+    background-color: rgb(92, 22, 78);
+    padding: 20px;
+    border: 2px dashed rgb(255, 229, 157);
+    cursor: pointer;
+}
+
+#experiences:active{
+    box-shadow: 5px 5px 1px rgb(238, 176, 176);
+}
+
+#experiences h1 {
+    color: rgb(255, 229, 157);
+}
+
+.experience-list,
+#riwayat-pendidikan ol {
+    padding: 30px 60px;
+}
+
+.experience-list li {
+    font-size: 25px;
+    color: rgb(255, 229, 157);
+}
+
+.experiences {
+    border-bottom: 2px solid rgb(145, 33, 122);
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.experiences h5 {
+    font-size: 50px;
+    background-color: rgb(145, 33, 122);
+    color: rgb(255, 229, 157);
+    width: fit-content;
+    padding: 3px 5px;
+    margin-bottom: 10px;
+}
+
+.experiences p {
+    color: rgb(145, 33, 122);
+}
+
+.experiences.end {
+    align-items: end;
+}
+
+#riwayat-pendidikan {
+    margin-top: 15vh;
+    border: 2px dashed rgb(145, 33, 122);
+    background-color: rgb(255, 229, 157);
+    cursor: pointer;
+}
+
+#riwayat-pendidikan:active {
+    box-shadow: 5px 5px 1px rgb(238, 176, 176);
+}
+
+#riwayat-pendidikan h1 {
+    color: rgb(145, 33, 122);
+    padding: 10px;
+}
+
+#riwayat-pendidikan li {
+    font-size: 25px;
+    color: rgb(145, 33, 122);
+}
+
+#riwayat-pendidikan-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.riwayat-pendidikans h5 {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(145, 33, 122);
+}
+
+.riwayat-pendidikans .nama-instansi {
+    background-color: rgb(145, 33, 122);
+    color: white;
+    padding: 0 5px;
+}
+
+.pendidikan-bars {
+    width: 5px;
+    height: 90px;
+    margin: 3vh 0;
+    background-color: rgb(145, 33, 122);    
+}
+
+#profile-preview {
+    width: 60%;
+    height: 100vh;
+    padding: 50px;
+    overflow-y: scroll;
+    background-color: rgb(255, 229, 157);
+    background-image: url('../images/oldpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+}
+
+#transition-box {
+    z-index: 50;
+    animation: trprofileoout 1.5s forwards;
+    background-color: rgb(121, 29, 102);
+}
+
+@keyframes trprofileoout {
+    from {
+        z-index: 50;
+        left: 0;
+    }
+
+    to {
+        z-index: 50;
+        left: -100vw;
+    }
+}
+
+#profile-preview{
+    overflow-x: hidden;
+}
+
+#profile-preview .profiles-preview{
+    display: none;
+}
+
+#profile-preview .profiles-preview.active{
+    animation: profilepreviews 1s ease-in-out;
+    display: flex;
+}
+
+@keyframes profilepreviews {
+    from{
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+    to{
+        opacity: 100%;
+        transform: translateX(10);
+    }
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1280px) {
+    #profile h1{
+        font-size: 35px;
+    }
+    #experiences h1, #riwayat-pendidikan h1{
+        font-size: 25px;
+    }
+    #experiences li, #riwayat-pendidikan li{
+        font-size: 20px;
+    }
+    .riwayat-pendidikans h5{
+        font-size: 23px;
+    }
+    .experiences h5{
+        font-size: 40px;
+    }
+}   
+
+@media (max-width: 1024px) {
+    #profile h1 {
+        font-size: 30px;
+    }
+
+    #profil-pribadi{
+        height: 100%;
+    }
+    
+    .foto{
+        width: 60%;
+    }
+
+    .skills{
+        width: 50%;
+        transform: translateX(-5vw);
+    }
+
+    #experiences h1, #riwayat-pendidikan h1 {
+        font-size: 20px;
+    }
+    
+    #experiences li, #riwayat-pendidikan li {
+        font-size: 15px;
+    }
+
+    #profile-table td{
+        font-size: 15px;
+    }
+    
+    .riwayat-pendidikans h5 {
+        font-size: 20px;
+    }
+}   
+
+@media (max-width: 850px){
+    #profile-experiences{
+        flex-direction: column;
+    }
+    #profile-details{
+        width: 100%;
+        padding: 5vh 10px;
+        height: 42%;
+    }
+    .foto{
+        width: 45%;
+    }
+    .skills{
+        width: fit-content;
+    }
+
+    #profile-preview{
+        width: 100%;
+        height: 58%;
+        padding: 40px 10px 100px 10px;
+    }
+    #profile{
+        display: flex;
+    }
+    #profile-name h1{
+        color: rgb(255, 229, 157);
+        text-shadow: 4px 4px 0px rgb(121, 29, 102);
+    }
+    #profile-name img{
+        display: none;
+    }
+    #profile-table{
+        margin-top: 0;
+    }
+    #profile-table td{
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    #profil-pribadi{
+        height: fit-content;
+    }
+
+    #experiences, #riwayat-pendidikan{
+        margin-top: 8vh;
+    }
+    .riwayat-pendidikans h5 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 640px){
+    #profile h1 {
+        font-size: 25px;
+        width: 70%;
+    }
+    #profile{
+        flex-direction: column;
+    }
+    #profile-table{
+        margin-top: 3vh;
+    }
+    #profile-table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .foto{
+        width: 50%;
+    }
+        .skills-table td {
+            font-size: 11px;
+        }
+    
+        .skills h3 {
+            font-size: 16px;
+        }
+    #experiences, #riwayat-pendidikan {
+        margin-top: 5vh;
+        padding: 10px;
+    }
+    #experiences h1, #riwayat-pendidikan h1 {
+        font-size: 15px;
+    }
+    
+    #experiences li, #riwayat-pendidikan li {
+        font-size: 12px;
+    }
+    .riwayat-pendidikans h5 {
+        font-size: 15px;
+    }
+    .pendidikan-bars {
+        height: 60px;
+        width: 4px;
+    }
+    .experiences h5{
+        font-size: 20px;
+    }
+    .experiences p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    #skills-table td {
+        font-size: 9px;
+    }
+    
+    .skills h3 {
+        font-size: 13px;
+    }
+}

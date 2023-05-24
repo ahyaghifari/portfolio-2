@@ -1,0 +1,133 @@
+/* -------------------------------------------------------- CONTACTS -------------------------------------------------------- */
+#contacts {
+    background-color: rgb(145, 33, 122);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contacts-container {
+    background-color: rgb(255, 229, 157);
+    background-image: url('../images/paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    padding: 50px;
+    width: 80%;
+    height: 80%;
+    box-shadow: 10px 10px 1px rgb(238, 176, 176), 20px 20px 1px rgb(92, 22, 78), 30px 30px 1px rgb(255, 229, 157);
+}
+
+#contacts-container h1 {
+    font-size: 70px;
+    border-bottom: 4px dashed rgb(145, 33, 122);
+    color: rgb(145, 33, 122);
+    margin-bottom: 50px;
+    text-shadow: -5px 5px 0px rgb(218, 196, 135), -10px 10px 0px rgb(238, 176, 176);
+}
+
+#contacts-container li {
+    font-size: 40px;
+    list-style: none;
+}
+
+#contacts-container li a {
+    color: rgb(145, 33, 122);
+    text-decoration: none;
+}
+
+#contacts-container li a:hover {
+    color: rgb(255, 229, 157);
+    background-color: rgb(145, 33, 122);
+    margin-bottom: 50px;
+}
+
+#contacts-content {
+    display: flex;
+}
+
+#contacts-telephone {
+    width: 300px;
+    margin-left: 15vw;
+    object-fit: contain;
+    opacity: 50%;
+}
+
+#contacts-telephone.animation {
+    animation: contactanim 0.5s ease-in-out;
+}
+
+#transition-box {
+    z-index: 50;
+    animation: trcontactoout 1.5s forwards;
+    background-color: rgb(255, 229, 157);
+}
+
+@keyframes trcontactoout {
+    from {
+        z-index: 50;
+        top: 0;
+    }
+
+    to {
+        z-index: 50;
+        top: 100vh;
+    }
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1024px){
+    #contacts-container h1{
+        font-size: 60px;
+    }
+    #contacts-container li {
+        font-size: 30px;
+        list-style: none;
+    }
+    #contacts-telephone {
+        width: 240px;
+    }
+}
+@media (max-width: 768px){
+    #contacts-container{
+        width: 90%;
+        box-shadow: 7px 7px 1px rgb(238, 176, 176), 14px 14px 1px rgb(92, 22, 78), 20px 20px 1px rgb(255, 229, 157);
+    }
+    #contacts-container h1{
+        font-size: 40px;
+        text-shadow: -3px 3px 0px rgb(218, 196, 135), -8px 8px 0px rgb(238, 176, 176);
+    }
+    #contacts-container li {
+        font-size: 30px;
+        list-style: none;
+    }
+    #contacts-telephone {
+        width: 200px;
+    }
+}
+@media (max-width: 640px){
+    #contacts-container{
+            box-shadow: 7px 7px 1px rgb(238, 176, 176), 14px 14px 1px rgb(92, 22, 78), 20px 20px 1px rgb(255, 229, 157);
+    }
+    #contacts-container h1{
+        font-size: 35px;
+        text-shadow: -2px 2px 0px rgb(218, 196, 135), -5px 5px 0px rgb(238, 176, 176);
+    }
+    #contacts-container li {
+        font-size: 25px;
+        list-style: none;
+    }
+    #contacts-telephone {
+        width: 220px;
+    }
+    #contacts-content{
+        flex-direction: column;
+    }
+    #contacts-telephone {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

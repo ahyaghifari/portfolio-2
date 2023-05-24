@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Gravitas One';
+    src: url('../font/GravitasOne-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Nunito Sans';
+    src: url('../font/NunitoSans.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gravitas One';
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#dust-glass{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/dust_glass.png');
+    z-index: 100;
+    opacity: 18%;
+    user-select: none;
+    pointer-events: none;
+}
+
+nav{
+    position: fixed;
+    padding: 10px;
+    border-radius: 10px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: fit-content;
+    display: flex;
+}
+
+nav button{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(255, 229, 157);
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(125, 30, 106);
+    margin: 0 3px 0 3px;
+}
+
+nav button img{
+    height: 30px;
+    width: 30px;
+}
+
+nav button:hover{
+    border: 1px dashed #ffe59d;
+    background-color: rgba(92, 22, 78, 0.562);
+    transform: scale(1.05);
+}
+
+.navs.active{
+    border: 2px solid white;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1024px){
+    nav button{
+        width: 50px;
+        height: 50px;
+    }
+    nav button img{
+        height: 25px;
+        width: 25px;
+    }
+}
+@media (max-width: 640px){
+    nav button{
+        width: 45px;
+        height: 45px;
+    }
+    nav button img{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+/* -------------------------------------------------------- TRANSITION -------------------------------------------------------- */
+#transition-box{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#transition-box.to-index{
+    animation: trboxtoindex 1.5s forwards;
+}
+
+
+@keyframes trboxtoindex {
+    from{
+        background-color: rgb(121, 29, 102);
+        top: 0;
+        left: -100vw;
+        z-index: 50;
+    }
+    to{
+        background-color: rgb(121, 29, 102);
+        top: 0;
+        left: 0;
+        z-index: 50;
+    }
+}
+
+#transition-box.to-portofolio{
+    animation: trboxtoportofolio 1.5s forwards;
+}
+
+
+@keyframes trboxtoportofolio {
+    from{
+        background-color: rgb(255, 229, 157);
+        top: 100vh;
+        z-index: 50;
+    }
+    to{
+        background-color: #ffe59d;
+        top: 0;
+        z-index: 50;
+    }
+}
+
+#transition-box.to-profile {
+    animation: trboxtoprofile 1.5s forwards;
+}
+
+@keyframes trboxtoprofile {
+    from {
+        background-color: rgb(121, 29, 102);
+        top: 0;
+        left: 100vw;
+        z-index: 50;
+    }
+
+    to {
+        background-color: rgb(121, 29, 102);
+        left: 0;
+        z-index: 50;
+    }
+}
+
+#transition-box.to-contact {
+    animation: trboxtocontact 1.5s forwards;
+}
+
+@keyframes trboxtocontact {
+    from {
+        background-color: rgb(255, 229, 157);
+        top: -100vh;
+        left: 0;
+        z-index: 50;
+    }
+
+    to {
+        background-color: rgb(255, 229, 157);
+        top: 0;
+        z-index: 50;
+    }
+}
