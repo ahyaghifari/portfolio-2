@@ -202,14 +202,15 @@
     }
     #welcome-container{
         padding: 40px;
+        width: 90%;
     }
     #welcome-name {
-        font-size: 30px;
+        font-size: 33px;
         border-bottom: 1px solid rgb(255, 229, 157);
     }
     
     #welcome #see-portofolio-btn {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
